@@ -1,6 +1,7 @@
 import time
 import allure
 from pages.FormFieldsPage import FormFieldsPage
+import pytest
 
 
 def test_form(driver):
@@ -25,3 +26,7 @@ def test_form(driver):
                      r'совпадает со считанным значением'):
         assert alert_text == 'Message received!', \
             'Значения не совпадают!'
+            
+
+if __name__ == '__main__':
+    pytest.main()
